@@ -8,7 +8,7 @@ WP Simple Import is a plugin that allows admin user to import posts from XML fil
   - Select if you wish to set the status of new Posts "Draft" or "Publish".
   - XML are not uploaded in any folder on server, instead XML is directly parsed from temp file.
 
-# Why to Use
+# Why to Use this WP Simple Import
 
   - WP default importer only imports WP exported XMLs, using this plugin you can import any type of XML and save to any post or custom post type (by modifying the code).
   - Simple code using OOPs concept and AJAX submission of form.
