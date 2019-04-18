@@ -1,0 +1,16 @@
+#upload_xml_form{
+    padding: 20px 0px;
+    /*border: solid 1px #900;*/
+}
+#ajax_response p{
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+#ajax_response p.bg-danger{
+    border: solid 2px #900;
+    color: #900;
+}
+#ajax_response p.bg-success{
+    border: solid 2px green;
+    color: #063;
+}
