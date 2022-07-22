@@ -1,0 +1,9 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+ .editor-styles-wrapper ul.circle-container {
+    list-style-type: none;
+}

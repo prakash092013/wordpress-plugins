@@ -1,0 +1,22 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ @media (min-width: 576px) {
+    .is-style-modal-sm .modal-dialog {
+      max-width: 300px;
+    }
+}
+ @media (min-width: 992px) {
+    .is-style-modal-lg .modal-dialog,
+    .is-style-modal-xl .modal-dialog {
+      max-width: 800px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .is-style-modal-xl .modal-dialog{
+      max-width: 1140px;
+    }
+  }

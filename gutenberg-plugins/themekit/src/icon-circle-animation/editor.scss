@@ -1,0 +1,24 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+ .editor-styles-wrapper ul.circle-container {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.editor-styles-wrapper .wp-block-cgb-icon-carousel p {
+    margin-top: 0;
+}
+
+.editor-styles-wrapper .wp-block-cgb-icon-carousel .tab-pane:not(.active) {
+    display: none;
+}
+.fa{
+    font: "Font Awesome 5 Pro";
+}
+.far {
+    font-weight: 400 !important;
+}

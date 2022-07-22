@@ -1,0 +1,11 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+
+ .wp-block[data-align="center"] {
+    text-align: center;
+  }

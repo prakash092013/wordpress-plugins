@@ -1,0 +1,80 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ .wp-block-cgb-accordion.accordion {
+	 margin-bottom: 3rem;
+ }
+ .wp-block-cgb-accordion-collapse.card {
+	border:none;
+	border-radius: 0;
+	background-color: transparent;
+}
+.wp-block-cgb-accordion.accordion h3 {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.wp-block-cgb-accordion.accordion h3 i.fa {
+	margin-right: 1rem;
+	font-size: 1.5rem;
+}
+
+/* whole block needs to be button, not just text */
+.wp-block-cgb-accordion.accordion > .card > .card-header {
+	padding: 0;
+	margin-bottom: 1rem;
+}
+.wp-block-cgb-accordion-collapse.card button{
+	display: flex;
+	padding: 1.25rem 3rem 1.25rem 1.25rem;
+	width: 100%;
+	text-align: left;
+	align-items: start;
+}
+
+/* add +/- to collapsible */
+.wp-block-cgb-accordion.accordion h3 button:after {
+	content: '\2212';
+	position: absolute;
+	right: 2rem;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	font-weight: 300;
+}
+.wp-block-cgb-accordion.accordion h3 button.collapsed:after {
+	content: '+' !important;
+}
+
+/* colors & hover */ 
+.wp-block-cgb-accordion.accordion .btn:not(:disabled):not(.disabled).collapsed,
+h3 .btn:not(:disabled):not(.disabled).collapsed:after{
+	color: var(--color-theme-dark);
+}
+.wp-block-cgb-accordion.accordion .btn:not(:disabled):not(.disabled),
+.wp-block-cgb-accordion.accordion .btn:not(:disabled):not(.disabled).collapsed:hover,
+.wp-block-cgb-accordion.accordion .btn:not(:disabled):not(.disabled).collapsed:focus,
+.wp-block-cgb-accordion.accordion .btn:not(:disabled):not(.disabled).collapsed:active,
+h3 .btn:not(:disabled):not(.disabled),
+h3 .btn:not(:disabled):not(.disabled).collapsed:hover:after,
+h3 .btn:not(:disabled):not(.disabled).collapsed:focus:after,
+h3 .btn:not(:disabled):not(.disabled).collapsed:active:after{
+	text-decoration:none;
+	color: var(--color-theme-secondary-dark);
+	box-shadow: none;
+}
+.wp-block-cgb-accordion.accordion .card-header {
+	border-bottom-color: transparent;
+}
+.wp-block-cgb-accordion.accordion .btn {
+	border-color: transparent;
+	border-bottom: 1px solid;
+	border-bottom-color: rgba(0,0,0,.125);
+}
+.wp-block-cgb-accordion.accordion .btn:not(.collapsed),
+.wp-block-cgb-accordion.accordion .btn:not(:disabled):not(.disabled).collapsed:hover,
+.wp-block-cgb-accordion.accordion .btn:not(:disabled):not(.disabled).collapsed:focus,
+.wp-block-cgb-accordion.accordion .btn:not(:disabled):not(.disabled).collapsed:active {
+	border-bottom-color: var(--color-theme-secondary-dark);
+}

@@ -1,0 +1,12 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+ .nav-tabs-header {
+     margin-bottom: 2rem;
+ }
+ .components-placeholder.components-placeholder {
+     background-color: transparent !important;
+ }

@@ -1,0 +1,160 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+ .wp-block-cgb-icon-button a{
+     
+     
+     text-align: center;
+     display: inline-block;
+     text-transform: uppercase;
+     font-weight: 600;
+     margin-bottom: 1rem;
+
+     /*color: green;*/
+
+     transition: color .3s;
+ }
+ .wp-block-cgb-icon-button i.fa {
+   font-size: 1.5rem;
+   width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 1rem;
+     margin-bottom: 1rem;
+    
+    /*color: white !important;*/
+
+    transition: color .3s;
+    transition: background-color .3s;
+ }
+ .wp-block-cgb-icon-button.is-style-icon-md i.fa {
+   font-size: 1.5rem;
+   width: 4rem;
+   height: 4rem;
+ }
+ .wp-block-cgb-icon-button.is-style-icon-lg i.fa {
+   font-size: 2.5rem;
+   width: 6rem;
+   height: 6rem;
+ }
+ .wp-block-cgb-icon-button.aligncenter i.fa {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* hover states - overall */
+.wp-block-cgb-icon-button a:not(.link-disabled):focus,
+.wp-block-cgb-icon-button a:not(.link-disabled):hover{
+   text-decoration: none;
+}
+
+ /*colors*/
+ @each $name, $color in $colors {
+   /* default */
+    .wp-block-cgb-icon-button.has-#{$name}-color a{
+      color: $color;
+    }
+    .wp-block-cgb-icon-button.has-#{$name}-color i.fa{
+      color: $color;
+      background-color: white;
+      border-color: $color;
+      
+      transition: color .3s;
+      transition: background-color .3s;
+    }
+    /* - hover background = original text color */
+    .wp-block-cgb-icon-button.has-#{$name}-color a:active i.fa, 
+    .wp-block-cgb-icon-button.has-#{$name}-color a:focus i.fa, 
+    .wp-block-cgb-icon-button.has-#{$name}-color a:hover i.fa,
+    .wp-block-cgb-icon-button.has-#{$name}-color.current-menu-item a i.fa{
+      color: white;
+      background-color: $color;
+    }
+  
+    /* fill */
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-fill a{
+      color: $color;
+    }
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-fill i.fa{
+      color: white;
+      background-color: $color;
+      border-color: $color;
+      
+      transition: color .3s;
+      transition: background-color .3s;
+    }
+    /* - hover background = original text color */
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-fill a:active i.fa, 
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-fill a:focus i.fa, 
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-fill a:hover i.fa{
+      color: $color;
+      background-color: white;
+    }
+
+    /* no fill */
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-no-fill a{
+      color: $color;
+    }
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-no-fill i.fa{
+      color:$color;
+      background-color: transparent;
+      border-color: transparent;
+
+      width: 3rem;
+      height: 3rem;
+
+      position: relative;
+      top: 0;
+      transition: top .3s;
+    }
+    /* - hover background = original text color */
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-no-fill a:active i.fa, 
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-no-fill a:focus i.fa, 
+    .wp-block-cgb-icon-button.has-#{$name}-color.is-style-icon-no-fill a:hover i.fa{
+      color: $color;
+      background-color: transparent;
+
+      top: 1rem;
+      
+    }
+  
+}
+
+/* offset class */
+.wp-block-cgb-icon-button.is-style-offset-top.is-style-icon-md {
+  margin-bottom: 2rem;
+  margin-top: -5rem !important;
+}
+.wp-block-cgb-icon-button.is-style-offset-top.is-style-icon-lg {
+  margin-bottom:0;
+  margin-top: -7rem !important;
+}
+
+/* icons in menu */
+.wp-block-cgb-icon-button.nav-item a{
+  width: 150px;
+}
+@media(max-width: 575px){
+  .wp-block-cgb-icon-button.nav-item a{
+    width: 100px;
+  }
+}
+
+/* alignment */
+.wp-block-group .wp-block-cgb-icon-button.alignleft i{
+  margin-left:0;
+}

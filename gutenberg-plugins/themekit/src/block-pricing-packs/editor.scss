@@ -1,0 +1,26 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+/* row/columns */
+
+.wp-block-cgb-block-pricing-packs .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: space-between;
+}
+/*.wp-block-cgb-block-pricing-packs .has-theme-light-background-color {
+    margin-left: -1.75rem;
+    margin-right: -1.75rem;
+}*/
+.wp-block-cgb-block-pricing-packs .col-sm-6 {
+    flex-grow: 1;
+    flex-shrink: 1;
+}

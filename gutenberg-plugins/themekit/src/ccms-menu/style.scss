@@ -1,0 +1,38 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ @media (max-width: 1199px){
+	.ditaroles-menu .wp-block-cgb-icon-button.nav-item {
+		width: 100px;
+	}
+	.ditaroles-menu .nav-link {
+		padding: 0;
+	}
+}
+@media (max-width: 991px){ 
+	.ditaroles-menu .wp-block-cgb-icon-button.nav-item {
+		flex-basis: 25%;
+	}
+}
+@media (max-width: 767px){ 
+	.ditaroles-menu .wp-block-cgb-icon-button.is-style-icon-lg i.fa {
+		font-size: 1.5rem;
+		width: 4rem;
+		height: 4rem;
+	}
+	.ditaroles-menu .wp-block-cgb-icon-button a {
+		font-size: 0.8rem;
+	}
+}
+@media (max-width: 575px){ 
+	.ditaroles-menu .wp-block-cgb-icon-button.is-style-icon-lg i.fa {
+		font-size: 1.5rem;
+		width: 3rem;
+		height: 3rem;
+	}
+	.ditaroles-menu .wp-block-cgb-icon-button a {
+		font-size: 0.7rem;
+	}
+}

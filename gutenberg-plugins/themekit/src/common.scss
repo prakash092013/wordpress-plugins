@@ -1,0 +1,32 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+ *  NOTE:  using this seems to load multiple versions on the front end (one for every block on the page?), dj. 
+*/
+$colors: (
+  'theme-default' 	:#717171,
+  'theme-white' 	: #ffffff,
+  'theme-black' 	: #000000,
+  'theme-light' 	: #fafafa,
+  'theme-medium-light' 	: #f2f2f2,
+  'theme-medium' 	: #ececec,
+  'theme-dark' 	: #303030,
+  'theme-primary' 	: #0c1434,
+  'theme-primary-dark' 	: #00001b,
+  'theme-primary-light' 	: #3f6594,
+  'theme-secondary' 	: #ff8c0a,
+  'theme-secondary-dark' 	:#fa740b,
+  'theme-secondary-light' 	: #ffc96d,
+	'picton-blue' 	: #43b2e5,
+	'eucalyptus' 	: #23B24E,
+	'lochinvar' 	: #24928F,
+  'trinidad' 		: #e85b03,
+  'regal-blue' 	: #003c66,
+  'silver' 		: #c7c7c7,
+  'purple' : #9B00B3,
+  'grenadier' : #CC4900,
+  'lightning-yellow' : #ffc311,
+  'caramel' :#ffd9ad,
+);

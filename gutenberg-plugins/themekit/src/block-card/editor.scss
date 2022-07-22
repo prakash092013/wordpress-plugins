@@ -1,0 +1,24 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+ .wp-block-cgb-card.card .wp-block-image {
+    margin-top: calc(-1rem + -28px);
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+.wp-block-cgb-card.card .wp-block[data-align="center"] > .wp-block-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+ .wp-block-cgb-card.card .wp-block-button__link {
+     width: 100%;
+ }
+ .wp-block-cgb-card.card .wp-block-buttons,
+ .wp-block-cgb-card.card .wp-block[data-type="cgb/card-footer"] {
+    margin-top: 0;
+    margin-bottom:0;
+ }
+ 

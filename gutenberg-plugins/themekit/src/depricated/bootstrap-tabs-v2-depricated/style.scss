@@ -1,0 +1,72 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-tabs .nav-tabs {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+.wp-block-cgb-tabs .nav-tabs .nav-link {
+    border:none;
+    padding: 2rem 1rem;
+    opacity: 0.5;
+    color: var(--color-theme-default);
+    display: inline-block;
+}
+@media (max-width: 575px) {
+    .wp-block-cgb-tabs .nav-tabs .nav-link {
+        padding: 1rem;
+    }
+}
+.wp-block-cgb-tabs .nav-tabs .nav-item.show .nav-link, 
+.wp-block-cgb-tabs .nav-tabs .nav-link.active {
+    color: inherit !important;
+    background-color: transparent !important;
+    font-weight: 600;
+}
+
+/* underline effect - note ::after conflicts with sub menu dropdown arrow */
+.wp-block-cgb-tabs .nav-tabs .nav-link span {
+    display:inline-block;
+    position:relative;
+    text-transform: uppercase;
+}
+.wp-block-cgb-tabs .nav-tabs .nav-link span::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--color-theme-secondary);
+    transition: width .3s;
+    position: relative;
+    top: 2rem;  
+    margin-left:auto;
+    margin-right: auto;
+  }
+  .wp-block-cgb-tabs .nav-tabs .nav-link:focus span::before,
+  .wp-block-cgb-tabs .nav-tabs .nav-link:hover span::before,
+  .wp-block-cgb-tabs .nav-tabs .nav-link.active span::before {
+    width: 100%;
+  }
+  .wp-block-cgb-tabs .nav-tabs .nav-link:focus,
+  .wp-block-cgb-tabs .nav-tabs .nav-link:hover,
+  .wp-block-cgb-tabs .nav-tabs .nav-link.active {
+    opacity: 1;
+  }
+  .wp-block-cgb-tabs .nav-tabs .nav-item.btn .nav-link span::before {
+    display:none;
+  }
+  @media (max-width: 991px) { 
+    .wp-block-cgb-tabs .nav-tabs .nav-link span::before {
+      margin-left: 0;
+    }
+  }
+  .tab-content {
+    position: relative;
+  }
+  .tab-pane {
+    position: absolute;
+    bottom: 0;
+  }

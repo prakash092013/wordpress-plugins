@@ -1,0 +1,110 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-icon-carousel {
+	position: relative;
+	margin: 3rem;
+}
+.wp-block-cgb-icon-carousel p {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/// Mixin to place items on a circle
+/// @author Hugo Giraudel
+/// @author Ana Tudor
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size, $item-size) {  
+	position: relative;
+	border-radius: 50%;
+	padding: 0; 
+	list-style: none;
+
+	width:  100%;
+	/*height: $circle-size;*/
+	padding-top: 100%;
+
+	> * {
+		display: block;
+		position: absolute;
+		top:  50%; 
+		left: 50%;
+		margin: -($item-size / 2);
+		width:  100%;
+		/*padding-top: 100%;*/
+		/*height: $item-size;*/
+		/*transform: translate(-50%, -50%);*/
+
+		/*padding-top: 100%;*/
+
+		$angle: (360 / $item-count);
+		$rot: 0;
+
+		@for $i from 1 through $item-count {
+			&:nth-of-type(#{$i}) {
+				//transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+				transform: rotate($rot * 1deg) translate(50%, -50%) rotate($rot * -1deg);
+			}
+
+			$rot: $rot + $angle;
+		}
+	}
+
+	img,
+	i.fa { 
+		width: $item-size;
+		height: $item-size;
+	}
+}
+
+.circle-container {
+	@include on-circle($item-count: 8, $circle-size: 20em, $item-size: 6rem); 
+	
+	border: solid 3px var(--color-theme-default);
+
+	img { 
+		display: block; 
+		max-width: 100%; 
+		border-radius: 50%;
+		filter: grayscale(100%);
+		border: solid 1px var(--color-theme-secondary-dark);
+		transition: .15s;
+		
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+	i.fa { 
+		display: block; 
+		max-width: 100%; 
+		border-radius: 50%;
+		background-color: var(--color-theme-secondary-dark);
+		color: var(--color-theme-white);
+		border: solid 1px var(--color-theme-secondary-dark);
+		transition: .15s;
+
+		font-size: 3rem;
+		position: relative;
+		
+		&:hover {
+			background-color: var(--color-theme-secondary-light);
+		}
+	}
+	i.fa:before {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

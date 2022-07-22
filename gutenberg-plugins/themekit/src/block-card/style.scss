@@ -1,0 +1,48 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-card.card {
+    border: none;
+    border-radius: 0;
+    max-width: 100% !important;
+}
+.wp-block-cgb-card-body.card-body {
+    padding: 1rem 1rem 2rem;
+}
+.wp-block-cgb-card.card h2 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.wp-block-cgb-card.card figure{
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+.wp-block-cgb-card.card figure a:hover img,
+.wp-block-cgb-card.card figure a:focus img,
+.wp-block-cgb-card.card figure a:active img{
+    opacity: 0.8;
+}
+.wp-block-cgb-card.card .wp-block-image{
+    margin-top: -1rem;
+}
+.wp-block-cgb-card.card .wp-block-cgb-icon-button {
+    z-index: 2;
+    position: relative;
+}
+.wp-block-cgb-card.card .wp-block-button,
+.wp-block-cgb-card.card .wp-block-button a {
+    display:block;
+}
+.wp-block-cgb-card.card .wp-block-buttons .wp-block-button {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.wp-block-cgb-card.card  .card-footer {
+    padding: 0;
+    background-color: transparent;
+    border-top: none;
+}

@@ -1,0 +1,96 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ .event-start-heading-display {
+     color: var(--color-theme-default);
+ }
+ .card-event figure {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+ }
+ @media (max-width: 991px){
+     .card-event figure {
+         height: 176px;
+     }
+ }
+ .card-event img{
+    position: absolute;
+    left: 50%;
+	top: 50%;
+
+	-webkit-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+
+	min-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+ }
+ .card-event .card-img-overlay{
+     display:flex;
+     align-items: flex-end;
+     justify-content: center;
+ }
+ 
+ .card time.day-month {
+     display: flex;
+     flex-direction: column;
+     line-height: 1;
+     color: var(--color-theme-secondary);
+     font-weight: 700;
+
+     background: rgb(255, 255, 255);
+    padding: .5rem;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3rem;
+    border: 1px solid;
+ }
+ .card time .day{
+     font-size: 2rem;
+ }
+ .card time .month{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.card-event i.location {
+    padding-left: 1rem;
+}
+
+.card-event p {
+    margin-bottom: 0;
+}
+.card-event a.readmore {
+    color: var(--color-theme-default);
+}
+
+hr.style-line {
+    background-image: url("gradient.jpg");
+    height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-size: cover;
+}
+@media(max-width: 991px){
+    .title-row.align-items-end {
+        align-items: flex-start !important;
+    }
+}
+@media(max-width: 767px){
+    .title-row h1{
+        padding-bottom: 2rem;
+    }
+    .event-date-p {
+        margin-bottom: 0;
+    }
+}
+.ixiashows-fallback-image img {
+    width: 100%;
+}

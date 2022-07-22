@@ -1,0 +1,108 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-team .card-column {
+    margin-bottom: 2rem;
+}
+.wp-block-cgb-team .card {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: var(--color-theme-white);
+    border-radius: 0;
+    border-color: var(--color-theme-light);
+}
+@media (max-width:575px){
+    .wp-block-cgb-team .card {
+        max-width: 350px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+/* image */
+.wp-block-cgb-team figure {
+    height: 400px;
+
+    position: relative;
+	overflow: hidden;
+	margin-top:0;
+	margin-bottom:0;
+}
+.wp-block-cgb-team img {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    position: absolute;
+	left: 50%;
+	top: 50%;
+
+	-webkit-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+
+    min-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    
+}
+
+/* inner content */
+.wp-block-cgb-team .card p {
+    font-size: 1rem;
+}
+.wp-block-cgb-team .card p:not(.card-text) {
+   margin-top: 1rem;
+}
+
+    /* short - underline */
+.wp-block-cgb-team p.job-title,
+.wp-block-cgb-team .card-title.short-underline {
+    position: relative;
+}
+.wp-block-cgb-team p.job-title::before,
+.wp-block-cgb-team .card-title.short-underline::before {
+    bottom: -1rem;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 2rem;
+    background-color: var(--color-theme-secondary);
+    left: 50%;
+    margin-left: -1rem;
+}
+.wp-block-cgb-team .card-title.short-underline {
+    margin-bottom: 2rem;
+}
+
+    /* social link */
+.wp-block-cgb-team a.linkedin-href {
+    display: block;
+}
+.wp-block-cgb-team i{
+    font-size: 1.5rem;
+    color: var(--color-theme-default);
+    
+    transition: color .3s;
+}
+
+/* alignment */
+.wp-block-cgb-team.aligncenter {
+    text-align: inherit;
+    justify-content: center;
+}
+
+
+/* hover effect */
+.wp-block-cgb-team a.linkedin-href:focus,
+.wp-block-cgb-team a.linkedin-href:hover {
+    text-decoration: none;
+}
+.wp-block-cgb-team a.linkedin-href:focus i,
+.wp-block-cgb-team a.linkedin-href:hover i{
+    color: var(--color-theme-secondary);
+}

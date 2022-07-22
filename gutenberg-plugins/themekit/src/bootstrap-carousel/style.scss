@@ -1,0 +1,145 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ .carousel-inner figure.featured-figure{
+	/* height is set in block settings */
+	position: relative;
+	overflow: hidden;
+	margin-top:0;
+	margin-bottom:0;
+	height: 100%;
+ }
+ .carousel-inner figure.featured-figure img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	-webkit-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+
+	min-height: 100%;
+	max-width: initial;
+}
+
+/* carousel caption - centered */
+.carousel-caption {
+	left: 50% !important;
+	top: 50%;
+	right: auto !important;
+
+	-webkit-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+
+	font-size: 1.375rem;
+	color: inherit !important;
+	width: 100%;
+	height: 100%;
+}
+
+.static-caption .carousel-caption {
+	position: relative !important;
+}
+
+/* carousel navigation */
+/* - indicators */
+.carousel-indicators {
+	position: relative !important;
+}
+.carousel-indicators > li {
+	border-radius: 50%;
+	width: 10px !important;
+	height: 10px !important;
+	background-color: var(--color-theme-default) !important;
+	opacity: 1 !important;
+}
+.carousel-indicators > li.active {
+	background-color: var(--color-theme-secondary) !important;
+}
+
+
+.image-indicators {
+	position: relative !important;
+	margin-top:1rem;
+	margin-bottom:1rem;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.image-indicators > li{
+	text-indent: 0!important;
+	width: auto !important;
+	height:auto !important;
+	border: 1px solid transparent!important;
+	border-radius: 0!important;
+	background-color: transparent!important;
+}
+.image-indicators > li.active{
+	border-color: #fff!important;
+}
+.image-indicators img {
+	max-width: 100%;
+	height:auto;
+}
+
+/* - controls */
+.carousel-control-prev {
+	left: -15% !important;
+	bottom: 0!important;
+	font-size: 2rem;
+	color: var(--color-theme-default) !important;
+	justify-content: flex-end !important;
+	padding-right: 1rem;
+}
+.carousel-control-next {
+	right: -15% !important;
+	bottom: 0!important;
+	font-size: 2rem;
+	color: var(--color-theme-default) !important;
+	justify-content: flex-start !important;
+	padding-left: 1rem;
+}
+//@media (max-width: 991px) { 
+	.p-carousel-controls {
+		position: absolute;
+		width: 100%;
+		bottom: 20px;
+	}
+	.carousel-control-prev {
+		left: 0 !important;
+		justify-content: flex-start !important;
+	}
+	.carousel-control-next {
+		right: 0 !important;
+		justify-content: flex-end !important;
+	}
+//}
+
+.carousel.alignfull .carousel-control-prev {
+	left: 0 !important;	
+	justify-content: flex-start !important;
+	margin-left: 1rem;
+}
+.carousel.alignfull .carousel-control-next {
+	right: 0 !important;
+	justify-content: flex-end !important;
+	margin-right: 1rem;
+}
+
+/* logos carousel */
+@media (max-width: 767px) { 
+	#carousel_our-customers .wp-block-gallery .blocks-gallery-item {
+		width: calc(33.33% - 22px) !important;
+	}
+}
+@media (max-width: 575px) { 
+	#carousel_our-customers .wp-block-gallery .blocks-gallery-item {
+		width: calc(33.33% - 15px) !important;
+	}
+}

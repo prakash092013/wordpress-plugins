@@ -1,0 +1,73 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-icon-heading {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.wp-block-cgb-icon-heading::after {
+    bottom: 0.5rem;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 2rem;
+    margin-left: 0.5rem;
+    display:none;
+}
+.wp-block-cgb-icon-heading > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.wp-block-cgb-icon-heading .icon-button {
+    margin-top: 0;
+    margin-bottom: 0;
+} 
+.wp-block-cgb-icon-heading .wp-block-cgb-icon-button::after {
+    bottom: 0.5rem;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 2rem;
+    margin-left: 4rem;
+    
+    left: 0;
+    right: 0;
+    background-color: red;
+}
+
+.wp-block-cgb-icon-heading i {
+    margin-bottom: 1rem !important;
+    margin-right: 1rem !important;
+}
+
+/*colors*/
+@each $name, $color in $colors {
+    /* default */
+    .wp-block-cgb-icon-heading.has-#{$name}-color > * {
+        color: $color;
+    }
+    .wp-block-cgb-icon-heading.has-#{$name}-color .wp-block-cgb-icon-button::after{
+        background-color: $color;
+    } 
+    .wp-block-cgb-icon-heading .wp-block-cgb-icon-button.has-#{$name}-color::after{
+        background-color: $color;
+    } 
+}
+
+/* alignment */
+.wp-block-cgb-icon-heading.aligncenter {
+    justify-content: center;
+}
+.wp-block-cgb-icon-heading.aligncenter .wp-block-cgb-icon-button::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+

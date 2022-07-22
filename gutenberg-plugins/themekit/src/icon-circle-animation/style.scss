@@ -1,0 +1,178 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-icon-carousel {
+	position: relative;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	width: 100%;
+}
+.wp-block-cgb-icon-carousel p {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	width: 10em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wp-block-cgb-icon-carousel a.nav-link {
+	display: inline-block;
+	text-decoration: none;
+	border:none;
+	padding: 0;
+}
+
+/* tabs overrides */
+.wp-block-cgb-icon-carousel .nav-tabs {
+    border-bottom: solid 3px var(--color-theme-white);
+}
+.wp-block-cgb-icon-carousel .nav-tabs .nav-item.show .nav-link, 
+.wp-block-cgb-icon-carousel .nav-tabs .nav-link.active {
+    color:var(--color-theme-default);
+    background-color: transparent;
+	border: none;
+	border-radius: 0;
+}
+.wp-block-cgb-icon-carousel .nav-tabs .nav-link:focus, 
+.wp-block-cgb-icon-carousel .nav-tabs .nav-link:hover {
+    border:none;
+}
+.wp-block-cgb-icon-carousel .nav-tabs .nav-item.show .nav-link i.fa, 
+.wp-block-cgb-icon-carousel .nav-tabs .nav-link.active i.fa{
+	background-color: var(--color-theme-secondary);
+}
+
+
+/// Mixin to place items on a circle
+/// @author Hugo Giraudel
+/// @author Ana Tudor
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size, $item-size) {  
+	position: relative;
+	border-radius: 50%;
+	padding: 0; 
+	list-style: none;
+
+	/*width:  100%; */
+	/*height: $circle-size;*/
+	width: $circle-size;
+	height: $circle-size;
+	margin-left: auto;
+	margin-right: auto;
+
+	//padding-top: 100%;
+
+	> li {
+		display: block;
+		position: absolute;
+		top:  50%; 
+		left: 50%;
+		margin: -($item-size / 2);
+		/*width:  100%;*/
+		width: $item-size;
+		height: $item-size;
+
+		/*padding-top: 100%;*/
+		/*height: $item-size;*/
+		/*transform: translate(-50%, -50%);*/
+
+		/*padding-top: 100%;*/
+
+		$angle: (360 / $item-count);
+		$rot: 0;
+
+		@for $i from 1 through $item-count {
+			&:nth-of-type(#{$i}) {
+				transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+				//transform: rotate($rot * 1deg) translate(50%, -50%) rotate($rot * -1deg);
+			}
+
+			$rot: $rot + $angle;
+		}
+	}
+
+	img,
+	i.fa { 
+		width: $item-size;
+		height: $item-size;
+	}
+}
+
+.circle-container { 
+
+	@include on-circle($item-count: 8, $circle-size: 25em, $item-size: 5rem); 
+
+	@media (max-width: 1199px){
+		@include on-circle($item-count: 8, $circle-size: 22em, $item-size: 5rem);
+	}
+	@media (max-width: 991px){
+		@include on-circle($item-count: 8, $circle-size: 15em, $item-size: 4rem);
+	}
+	@media (max-width: 767px){
+		@include on-circle($item-count: 8, $circle-size: 22em, $item-size: 5rem);
+	}
+	@media (max-width: 575px){
+		@include on-circle($item-count: 8, $circle-size: 15em, $item-size: 4rem);
+	}
+	
+	border: solid 3px var(--color-theme-white);
+
+	img { 
+		display: block; 
+		max-width: 100%; 
+		border-radius: 50%;
+		filter: grayscale(100%);
+		border: solid 1px var(--color-theme-secondary);
+		transition: .15s;
+		
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+	i.fa { 
+		max-width: 100%; 
+		border-radius: 50%;
+		background-color: var(--color-theme-secondary-light);
+		color: var(--color-theme-white);
+		border: none;
+		transition: .15s;
+
+		font-size: 2.5rem;
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		&:hover {
+			background-color: var(--color-theme-secondary);
+		}
+	}
+	i.fa:before {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+/* adjusting z-index for overlapping */
+.circle-container > li:nth-of-type(3){
+	z-index: 1;
+}
+
+/* adjust inner circle font size */
+.wp-block-cgb-icon-carousel p.has-lead-font-size{
+	font-size: 1.5rem;
+}

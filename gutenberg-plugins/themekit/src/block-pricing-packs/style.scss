@@ -1,0 +1,25 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+ .wp-block-cgb-pricing-currency-selector .select-options, 
+ .wp-block-cgb-block-pricing-packs {
+     width: 100%;
+ }
+
+ .wp-block-cgb-block-pricing-packs .has-theme-light-background-color{
+     margin-left: -1rem;
+     margin-right: -1rem;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+ }
+ .wp-block-cgb-block-pricing-packs .price {
+     font-weight: 300;
+ }
+ .wp-block-cgb-block-pricing-packs .wp-block-group {
+    border: 1px solid #eee;
+    margin: 2rem 0;
+
+}

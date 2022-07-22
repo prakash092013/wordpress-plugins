@@ -1,0 +1,17 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+ .wp-block-cgb-icon-heading .block-editor-block-list__layout{
+   display: flex;
+   align-items: center;
+ }
+
+.wp-block[data-align="center"] .wp-block-cgb-icon-heading {
+   justify-content: center;
+}
+.wp-block-cgb-icon-heading::after {
+   bottom: 2.5rem;
+}

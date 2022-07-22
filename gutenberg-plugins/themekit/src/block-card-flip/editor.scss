@@ -1,0 +1,21 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+
+.wp-block-cgb-card-flip:hover .wp-block-cgb-inner-card-flip {
+    display:block;
+}
+.wp-block-cgb-inner-card-flip {
+    position: relative;
+}
+.wp-block-cgb-card-flip:hover .wp-block-cgb-inner-card-flip { 
+    height: 100%;
+    overflow: visible;
+    min-height: 0;
+    padding: inherit;
+    display:flex;
+}

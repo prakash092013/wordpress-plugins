@@ -1,0 +1,229 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-tabs .nav-tabs {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+.wp-block-cgb-tabs .tab-link {
+    padding: 1rem 2rem;
+    opacity: 0.5;
+    border: 1px dotted transparent;
+}
+@media (max-width: 575px) {
+    .wp-block-cgb-tabs .tab-link {
+        padding: 1rem;
+    }
+}
+
+
+
+/* underline effect - note ::after conflicts with sub menu dropdown arrow */
+.wp-block-cgb-tabs .tab-link span {
+    display:inline-block;
+    position:relative;
+    text-transform: uppercase;
+}
+.wp-block-cgb-tabs .tab-link span::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: var(--color-theme-default);
+  transition: width .3s;
+  position: relative;
+  top: 2rem;  
+  margin-left:auto;
+  margin-right: auto;
+}
+.wp-block-cgb-tabs .nav-tabs .tab-link:focus span::before,
+.wp-block-cgb-tabs .nav-tabs .tab-link:hover span::before,
+.wp-block-cgb-tabs .nav-tabs .tab-link.active span::before {
+  width: 100%;
+}
+.wp-block-cgb-tabs .nav-tabs .tab-link:focus,
+.wp-block-cgb-tabs .nav-tabs .tab-link:hover,
+.wp-block-cgb-tabs .nav-tabs .tab-link.active {
+  opacity: 1;
+}
+.wp-block-cgb-tabs .nav-tabs .nav-item.btn .tab-link span::before {
+  display:none;
+}
+@media (max-width: 991px) { 
+  .wp-block-cgb-tabs .nav-tabs .tab-link span::before {
+    margin-left: 0;
+  }
+}
+
+.wp-block-cgb-tabs i.fa {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+  /* active tab */
+.wp-block-cgb-tabs .nav-tabs .nav-item.show .tab-link, 
+.wp-block-cgb-tabs .nav-tabs .tab-link.active {
+    font-weight: 600;
+}
+
+/* hover states */
+.wp-block-cgb-tabs nav a {
+  color: var(--color-theme-default);
+
+  transition: border-color .3s;
+}
+.wp-block-cgb-tabs nav a:hover{
+  background-color: transparent;
+  text-decoration: none;
+  border-color: var(--color-theme-default);
+}
+
+@each $name, $color in $colors {
+  .wp-block-cgb-tabs nav a.has-#{$name}-color{
+    color: $color;
+    opacity: 1;
+  }
+  .wp-block-cgb-tabs nav a.has-#{$name}-background-color{
+    background-color: $color;
+  }
+  .wp-block-cgb-tabs nav a.has-#{$name}-color:hover{
+    background-color: $color;
+  }
+  .wp-block-cgb-tabs nav a.has-#{$name}-background-color:hover{
+    color: $color;
+  }
+  .wp-block-cgb-tabs .nav-tabs .tab-link.has-#{$name}-color span::before{
+    background: $color;
+  }
+  .wp-block-cgb-tabs .nav-tabs .tab-link.has-#{$name}-background-color:hover span::before{
+    background: $color;
+  }
+  
+}
+
+/* is-style-icon-navigation */
+.wp-block-cgb-tabs.is-style-icon-navigation nav {
+  position: relative;
+  margin-bottom: 5rem;
+  flex-wrap: nowrap;
+}
+.wp-block-cgb-tabs.is-style-icon-navigation nav::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  border-bottom: 1px dashed;
+  display: block;
+  top: 50%;
+  position: absolute;
+  z-index: 0;
+}
+.wp-block-cgb-tabs.is-style-icon-navigation nav a {
+  display:flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-basis: 160px;
+  
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+  border-radius: 5px;;
+  border-width: 1px;
+  border-style: solid;
+
+  padding: 1rem;
+  z-index: 1;
+}
+.wp-block-cgb-tabs.is-style-icon-navigation nav a i.fa{
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-right: 0;
+}
+.wp-block-cgb-tabs.is-style-icon-navigation .tab-link span {
+  text-transform: none;
+  font-weight: 300;
+}
+.wp-block-cgb-tabs.is-style-icon-navigation .tab-link span::before {
+  display:none;
+}
+
+.wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .nav-item.show .tab-link, 
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .tab-link.active{
+    position: relative;
+  }
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .nav-item.show .tab-link::after, 
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .tab-link.active::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid;
+    position: absolute;
+    bottom: calc(-1rem + -4px);
+    margin-left: auto;
+    margin-right: auto;
+    left: calc(50% - 20px);
+
+    transition: border-color .3s;
+  }
+
+@each $name, $color in $colors {
+  
+  .wp-block-cgb-tabs.is-style-icon-navigation nav a.has-#{$name}-color{
+    border-color: $color;
+  }
+  .wp-block-cgb-tabs.is-style-icon-navigation nav a.has-#{$name}-background-color:hover{
+    border-color: $color;
+  }
+
+  /* active tab */
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .nav-item.show .tab-link.has-#{$name}-color, 
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .tab-link.active.has-#{$name}-color {
+    background-color: $color;
+  }
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .nav-item.show .tab-link.has-#{$name}-background-color, 
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .tab-link.active.has-#{$name}-background-color {
+    color: $color;
+  }
+  
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .nav-item.show .tab-link.has-#{$name}-color::after, 
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .tab-link.active.has-#{$name}-color::after{
+    border-top-color: $color;
+  }
+}
+
+@media (max-width: 767px) {
+  .wp-block-cgb-tabs.is-style-icon-navigation nav {
+    flex-wrap: wrap;
+  }
+  .wp-block-cgb-tabs.is-style-icon-navigation nav::before {
+    display: none;
+  }
+  .wp-block-cgb-tabs.is-style-icon-navigation nav a {
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 100%;
+  }
+  .wp-block-cgb-tabs.is-style-icon-navigation nav a i.fa {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .nav-item.show .tab-link::after, 
+  .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .tab-link.active::after {
+    top: 50%;
+    margin-top: -10px;
+    right: 25px;
+    left: initial;
+  }
+  @each $name, $color in $colors {
+    .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .nav-item.show .tab-link.has-#{$name}-background-color::after, 
+    .wp-block-cgb-tabs.is-style-icon-navigation .nav-tabs .tab-link.active.has-#{$name}-background-color::after{
+      border-top-color: $color;
+    }
+  }
+}

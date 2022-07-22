@@ -1,0 +1,16 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block[data-align="left"] > .wp-block-cgb-icon-button {
+    float:none;
+}
+.wp-block[data-align="left"] > .wp-block-cgb-icon-button i {
+    margin-left:0;
+}
+.block-editor-block-list__block[data-type="cgb/icon-button"] .wp-block[data-align="left"] {
+    height: auto;
+}

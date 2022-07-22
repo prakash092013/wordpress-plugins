@@ -1,0 +1,87 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.editor-styles-wrapper h2.is-style-heading-style-1,
+.editor-styles-wrapper h2.is-style-heading-style-2 {
+  font-size: 1.143rem;
+  font-weight: 400;
+  color: var(--color-theme-dark);
+}
+.editor-styles-wrapper p.is-style-lead {
+  font-size: 1.714rem;
+}
+
+/* fade in animation */
+.is-style-fade-in.has-theme-white-background-color {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/*  align stretch 
+*-----------------------------------------------------------*/
+
+.wp-block-columns.is-style-align-stretch .wp-block-cgb-card,
+.wp-block-columns.is-style-align-stretch
+  .wp-block-cgb-card
+  > .block-editor-inner-blocks,
+.wp-block-columns.is-style-align-stretch
+  .wp-block-cgb-card
+  > .block-editor-inner-blocks
+  > .block-editor-block-list__layout {
+  height: 100%;
+}
+.wp-block-columns.is-style-align-stretch
+  .wp-block-cgb-card
+  > .block-editor-inner-blocks
+  > .block-editor-block-list__layout {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wp-block-columns.is-style-align-stretch
+  .wp-block-cgb-card
+  > .block-editor-inner-blocks
+  > .block-editor-block-list__layout
+  > * {
+  flex-basis: 100%;
+}
+.wp-block-columns.is-style-align-stretch
+  .wp-block-cgb-card
+  > .block-editor-inner-blocks
+  > .block-editor-block-list__layout
+  > .wp-block[data-type="cgb/card-footer"] {
+  align-self: flex-end;
+}
+
+/* hr style */
+.is-style-full-line {
+  width: 100%;
+}
+
+/* group icon banner bkgd */
+.is-style-icon-banner-background,
+.wp-block-group.has-background.is-style-icon-banner-background {
+  padding: 1rem;
+  display: block;
+  height: auto;
+}
+
+/* icon heading - new 12/06/21, dj */
+.editor-styles-wrapper h2.is-style-icon-heading {
+  font-size: 1.125rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* troubleshoot issue - editor toolbar displays super large (firefox only?), dj */
+.block-editor-block-toolbar
+  > .components-toolbar
+  > .block-editor-block-toolbar__slot
+  > div
+  > .components-button
+  svg {
+  height: 2rem;
+}
